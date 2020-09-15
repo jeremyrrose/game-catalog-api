@@ -1,36 +1,45 @@
 from django.db import models
-import json
-from authentication.models import User
+
+
+# import json
 
 
 # Create your models here.
 
 
-class Game(models.Model):
-    owner: models.ManyToManyField(User)
-    name: models.CharField(max_length=100)
-    region: models.CharField(max_length=100)
-    rating: models.CharField(max_length=500)
-    developers: models.CharField(max_length=500)
-    release_date: models.CharField(max_length=50)
-    # Image urls for the frontend
-    cover: models.TextField()
-    banner: models.TextField()
+class Platform(models.Model):
+    name = models.CharField(max_length=50)
 
-    # Might need to move to serializers
-    def set_rating(self, rating, dev):
-        self.rating = json.dumps(rating)
-        self.developers = json.dumps(dev)
+    def __str__(self):
+        return self.name
+
+
+class Game(models.Model):
+    name = models.CharField(max_length=100, default=None)
+    region = models.CharField(max_length=100, default=None)
+    rating = models.CharField(max_length=500, default=None)
+    developers = models.CharField(max_length=500, default=None)
+    # Many to Many is a django field, it does a thing. I think it makes a table thing
+    platforms = models.ManyToManyField(Platform, default=None, related_name='games')
+    release_date = models.DateTimeField(default=None)
+    # Image urls for the frontend
+    cover = models.TextField(default=None)
+    banner = models.TextField(default=None)
+
+    def __str__(self):
+        return self.name
+
+    # Might need to move to views ??
+    # def set_rating(self, dev):
+    #     self.developers = json.dumps(dev)
 
 
 class Review(models.Model):
-    game: models.ForeignKey(Game, on_delete=models.CASCADE)
-    owner: models.ForeignKey(User, on_delete=models.CASCADE)
-    text: models.TextField()
-    is_Official: models.BooleanField(default=False)
+    header = models.CharField(max_length=100, default=None)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, default=None)
+    # owner: models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField(default=None)
+    is_official = models.BooleanField(default=False)
 
-
-class Platform(models.Model):
-    name = models.CharField(max_length=50)
-    # Ask about multiple owners
-    games = models.ManyToManyField(Game)
+    def __str__(self):
+        return self.header

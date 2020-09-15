@@ -3,7 +3,7 @@ from django.contrib.auth.models import (
     AbstractBaseUser, BaseUserManager, PermissionsMixin
 )
 from rest_framework_jwt.settings import api_settings
-from apps.gaming.models import Game
+from apps.gaming.models import Game, Platform
 
 # Our JWT payload
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
@@ -67,6 +67,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=True)
     games = models.ManyToManyField(Game)
+    platforms = models.ManyToManyField(Platform)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
