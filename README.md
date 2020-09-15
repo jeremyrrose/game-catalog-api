@@ -80,12 +80,12 @@ The repository for your backend API should include:
     - Descriptions of any **unsolved problems** or **hurdles** you had to overcome.
     
     #### MVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Make/Alter Models,Serializers and Views | H | 5hr | -hr | -hr|
-| Test and Debug Api | H | 5hr | 7hr | -hr|
-| Create Urls | H | 2hr | 2hr | -hr|
-| Make test GS api calls | H | 2hr | 30minhr | -hr|
+| Make/Alter Models,Serializers and Views | H | 5hr | 2hr | -hr|
+| Test and Debug Api | H | 5hr | 3hr 30min | -hr|
+| Create Urls | H | 2hr | 0hr 30min | -hr|
+| Make test GS api calls | H | 2hr | 30min | -hr|
 | Show comments comments Frontend | H | 2hr | 2hr | -hr|
 | Delete favorite Frontend| H | 2hr | .5hr | -hr|
 | Activities Modal| H | 2hr | 1hr | 1hr|
@@ -93,7 +93,7 @@ The repository for your backend API should include:
 | Total | H | 18hrs| -hrs | -hrs |
 
 #### PostMVP
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 |Robust Search features| L | 3hr | -hr | -hr|
 |Robust Review Feature| L | 2hr | 7hr | -hr|

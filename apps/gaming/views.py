@@ -10,10 +10,20 @@ from rest_framework.exceptions import (
 )
 from rest_framework import generics
 
+
 # Create your views here.
 
-class GameViewSet(generics.ListCreateAPIView):
-    pass
+class GameViewSet(generics.RetrieveAPIView):
+    permission_classes = (AllowAny,)
+    serializer_class = GameSerializer
+
+    def get_queryset(self):
+        if self.kwargs.get('pk'):
+            game = Game.objects.filter(pk=self.kwargs['pk'])
+            print(game)
+            # queryset = game.reviews.all()
+            # print(queryset)
+            return game
 
 
 class PlatformViewSet(generics.ListCreateAPIView):
@@ -23,41 +33,40 @@ class PlatformViewSet(generics.ListCreateAPIView):
     def get_queryset(self):
         if self.kwargs.get('pk'):
             platform = Platform.objects.get(pk=self.kwargs['pk'])
-            print(platform)
             queryset = platform.games.all()
             return queryset
 
 
-# class ReviewViewSet(viewsets.ModelViewSet):
-#     permission_classes = (IsAuthenticated,)
-#     serializer_class = ReviewSerializer
-#
-#     def get_queryset(self):
-#         queryset = Review.objects.all().filter(owner=self.request.user)
-#         return queryset
-#
-#     def create(self, request, *args, **kwargs):
-#         if request.user.is_anonymous:
-#             raise PermissionDenied(
-#                 "Seems like you aren't logged in, that's a shame."
-#             )
-#         return super().create(request, *args, **kwargs)
-#
-#     def perform_create(self, serializer):
-#         serializer.save(owner=self.request.user)
-#
-#     def destroy(self, request, *args, **kwargs):
-#         review = Review.objects.get(pk=self.kwargs['pk'])
-#         if not request.user == review.owner:
-#             raise PermissionDenied(
-#                 "This isn't your review, you dont have the power to delete it"
-#             )
-#         return super().destroy(request, *args, **kwargs)
-#
-#     def update(self, request, *args, **kwargs):
-#         review = Review.objects.get(pk=self.kwargs['pk'])
-#         if not request.user == review.owner:
-#             raise PermissionDenied(
-#                 "You can't rearrange the words of other people!!"
-#             )
-#         return super().update(request, *args, **kwargs)
+class ReviewViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+    serializer_class = ReviewSerializer
+
+    def get_queryset(self):
+        queryset = Review.objects.all()
+        return queryset
+
+    def create(self, request, *args, **kwargs):
+        if request.user.is_anonymous:
+            raise PermissionDenied(
+                "Seems like you aren't logged in, that's a shame."
+            )
+        return super().create(request, *args, **kwargs)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+    def destroy(self, request, *args, **kwargs):
+        review = Review.objects.get(pk=self.kwargs['pk'])
+        if not request.user == review.owner:
+            raise PermissionDenied(
+                "This isn't your review, you dont have the power to delete it"
+            )
+        return super().destroy(request, *args, **kwargs)
+
+    def update(self, request, *args, **kwargs):
+        review = Review.objects.get(pk=self.kwargs['pk'])
+        if not request.user == review.owner:
+            raise PermissionDenied(
+                "You can't rearrange the words of other people!!"
+            )
+        return super().update(request, *args, **kwargs)

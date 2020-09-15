@@ -29,6 +29,7 @@ class Game(models.Model):
     def __str__(self):
         return self.name
 
+
     # Might need to move to views ??
     # def set_rating(self, dev):
     #     self.developers = json.dumps(dev)
@@ -36,8 +37,8 @@ class Game(models.Model):
 
 class Review(models.Model):
     header = models.CharField(max_length=100, default=None)
-    game = models.ForeignKey(Game, on_delete=models.CASCADE, default=None)
-    # owner: models.ForeignKey(User, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, default=None, related_name='reviews')
+    owner = models.ForeignKey('authentication.User', on_delete=models.CASCADE)
     text = models.TextField(default=None)
     is_official = models.BooleanField(default=False)
 
