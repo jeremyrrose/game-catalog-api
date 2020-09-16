@@ -9,16 +9,21 @@ from django.db import models
 
 class Platform(models.Model):
     name = models.CharField(max_length=50)
+    brand = models.CharField(max_length=55)
 
     def __str__(self):
         return self.name
+
+class Developer(models.Model):
+    name = models.CharField(max_length=100)
 
 
 class Game(models.Model):
     name = models.CharField(max_length=100, default=None)
     region = models.CharField(max_length=100, default=None)
     rating = models.CharField(max_length=500, default=None)
-    developers = models.CharField(max_length=500, default=None)
+    developers = models.ManyToManyField(Developer, default=None, related_name='developers')
+    description = models.TextField(default=None)
     # Many to Many is a django field, it does a thing. I think it makes a table thing
     platforms = models.ManyToManyField(Platform, default=None, related_name='games')
     release_date = models.DateTimeField(default=None)

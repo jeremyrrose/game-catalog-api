@@ -16,7 +16,7 @@ class GameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Game
-        fields = ('id', 'name', 'platforms', 'region', 'rating',
+        fields = ('id', 'name', 'description', 'platforms', 'region', 'rating',
                   'developers', 'release_date', 'reviews', 'cover', 'banner')
 
 
@@ -25,4 +25,4 @@ class PlatformSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Platform
-        fields = ('id', 'name', 'games')
+        fields = ('id', 'name', 'brand', 'games')

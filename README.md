@@ -86,7 +86,7 @@ The repository for your backend API should include:
 | Test and Debug Api | H | 5hr | 3hr 30min | -hr|
 | Create Urls | H | 2hr | 0hr 30min | -hr|
 | Make test GS api calls | H | 2hr | 30min | -hr|
-| Show comments comments Frontend | H | 2hr | 2hr | -hr|
+| Seeding Database | H | 3hr | 1hr | -hr|
 | Delete favorite Frontend| H | 2hr | .5hr | -hr|
 | Activities Modal| H | 2hr | 1hr | 1hr|
 | Seed Database | H | 5hr | 6hr | -hr|
@@ -115,5 +115,5 @@ The repository for the frontend of your application should include:
   Netlify. Applications that are not deployed will be considered incomplete.
  
 #### Additional libraries
-[Gamespot Api](https://www.gamespot.com/api/)
+
 --

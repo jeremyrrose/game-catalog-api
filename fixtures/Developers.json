@@ -1,0 +1,86 @@
+[
+  {
+    "model": "gaming.developer",
+    "pk": 1,
+    "fields": {
+      "name": "Ubisoft Montreal"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 2,
+    "fields": {
+      "name": "Bioware"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 3,
+    "fields": {
+      "name": "Demiurge Studios"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 4,
+    "fields": {
+      "name": "CD Projekt Red Studio"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 5,
+    "fields": {
+      "name": "Saber Interactive"
+    }
+  },
+    {
+     "model": "gaming.developer",
+    "pk": 6,
+    "fields": {
+      "name": "CD Projekt Red S.A."
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 7,
+    "fields": {
+      "name": "GameLoft"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 8,
+    "fields": {
+      "name": "Straight Right"
+    }
+  },
+   {
+     "model": "gaming.developer",
+    "pk": 9,
+    "fields": {
+      "name": "Respawn Entertainment"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 10,
+    "fields": {
+      "name": "Bluepoint Games"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 11,
+    "fields": {
+      "name": "From Software"
+    }
+  },
+  {
+     "model": "gaming.developer",
+    "pk": 11,
+    "fields": {
+      "name": "Bandai Namco Games"
+    }
+  }
+]

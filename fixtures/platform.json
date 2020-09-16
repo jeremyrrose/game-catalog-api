@@ -1,0 +1,74 @@
+[
+  {
+    "model": "gaming.platform",
+    "pk": 1,
+    "fields": {
+      "name": "Playstation 2",
+      "brand": "Sony-Playstation"
+    }
+  },
+  {
+      "model": "gaming.platform",
+    "pk": 2,
+    "fields": {
+      "name": "Playstation 3",
+      "brand": "Sony-Playstation"
+    }
+  },
+  {
+      "model": "gaming.platform",
+    "pk": 3,
+    "fields": {
+      "name": "Playstation 4",
+      "brand": "Sony-Playstation"
+    }
+  },
+  {
+      "model": "gaming.platform",
+    "pk": 4,
+    "fields": {
+      "name": "Xbox",
+      "brand": "Microsoft-Xbox"
+    }
+  },
+  {
+     "model": "gaming.platform",
+    "pk": 5,
+    "fields": {
+      "name": "Xbox 360",
+      "brand": "Microsoft-Xbox"
+    }
+  },
+  {
+     "model": "gaming.platform",
+    "pk": 6,
+    "fields": {
+      "name": "Xbox One",
+      "brand": "Microsoft-Xbox"
+    }
+  },
+  {
+     "model": "gaming.platform",
+    "pk": 7,
+    "fields": {
+      "name": "Nintendo 3DS",
+      "brand": "Nintendo"
+    }
+  },
+  {
+    "model": "gaming.platform",
+    "pk": 8,
+    "fields": {
+      "name": "Nintendo Switch",
+      "brand": "Nintendo"
+    }
+  },
+  {
+    "model": "gaming.platform",
+    "pk": 9,
+    "fields": {
+      "name": "PC",
+      "brand": "PC"
+    }
+  }
+]

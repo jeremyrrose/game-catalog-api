@@ -1,0 +1,386 @@
+[
+  {
+    "model": "gaming.game",
+    "pk": 1,
+    "fields": {
+      "name": "The Witcher 3: Wild Hunt",
+      "region": "North America",
+      "description": "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by Polish developer CD Projekt Red and is based on The Witcher series of fantasy novels by Andrzej Sapkowski.  Plot: Geralt rejoins his long-lost lover, Yennefer, in the town of White Orchard. Yennefer tells him that Emperor Emhyr has summoned him to the city of Vizima. Emhyr tasks Geralt with finding Ciri, who has recently been seen in several places. Ciri is the daughter of the emperor and the last heir to an ancient elder bloodline with the power to manipulate space and time. Geralt travels to Velen at Crow's Perch, the Bloody Baron's fort.",
+      "rating": "ESRB: M: Blood and Gore, Intense Violence, Nudity, Strong Language, Strong Sexual Content, Use of Alcohol",
+      "developers": [
+        {
+          "developer_id": 4
+        },
+        {
+          "developer_id": 5
+        },
+        {
+          "developer_id": 6
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 6
+        },
+        {
+          "platform_id": 9
+        },
+        {
+          "platform_id": 8
+        }
+      ],
+      "release_date": "2015-05-18 12:00:00",
+      "cover": "https://i.redd.it/75rjpmgqedf11.jpg",
+      "banner": "https://timelinecovers.pro/facebook-cover/download/video-game-the-witcher-3-wild-hunt-the-score-facebook-cover.jpg"
+    }
+  },
+  {
+    "model": "gaming.game",
+    "pk": 2,
+    "fields": {
+      "name": "Mass Effect",
+      "region": "Australia",
+      "description": "Mass Effect (2007), the first game in the series, was originally created as an exclusive title for the Xbox 360 but was later ported to Microsoft Windows by Demiurge Studios, and to the PlayStation 3 by Edge of Reality. The game focuses on the protagonist, Commander Shepard, and their quest to stop the rogue Spectre Saren Arterius from leading an army of sentient machines, called the Geth, to conquer the galaxy. During pursuit of Saren, Shepard develops key relationships with other characters, primarily their squad team members, all while learning of a far greater threat in the form of the Reapers. Saren has been mentally enslaved by the Reaper vanguard Sovereign, and sent into Citadel Space to initiate the purge of all advanced organic life in the galaxy, a cycle repeated by the Reapers every 50,000 years.",
+      "rating":  "ACB: MA: Blood, Language, Partial Nudity, Sexual Themes, Violence",
+      "developers": [
+        {
+          "developer_id": 3
+        },
+        {
+          "developer_id": 2
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 2
+        },
+        {
+          "platform_id": 5
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2007-11-16 12:00:00",
+      "cover": "  https://upload.wikimedia.org/wikipedia/en/e/e8/MassEffect.jpg\n" ,
+      "banner": "https://sorenette.files.wordpress.com/2015/07/mass-effect-banner.jpg"
+    }
+  },
+  {
+    "model": "gaming.game",
+    "pk": 3,
+    "fields": {
+      "name": "Mass Effect 2",
+      "region": "Australia",
+      "description": "Mass Effect 2, the second main game in the series, was released on January 26, 2010, in North America and January 29 in Europe.[4] A great deal of secrecy surrounded the game prior to launch, with few details emerging other than Casey Hudson, Project Director for BioWare, stating that \"players should keep their save files, because decisions made by the player in the first game will continue to have influences on their character in the sequel\".[5][6] The game takes place two years after the events of Mass Effect. Human colonies are being attacked, their colonists disappearing without a trace. The game's protagonist, Commander Shepard, is forced into an uneasy alliance with the pro-Human paramilitary organization, Cerberus, in an effort to discover the cause. Evidence emerges pointing to the \"Collectors\", an advanced, enigmatic race of insect-like humanoids. Adding to the threat is the revelation that the Collectors are working for the Reapers. Shepard sets out on a \"suicide mission\" to stop the Collectors, accompanied by a hand-picked team of soldiers, assassins, mercenaries, and specialists.",
+      "rating":  "ACB: MA: Blood, Language, Partial Nudity, Sexual Themes, Violence",
+      "developers": [
+        {
+          "developer_id": 2
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 2
+        },
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2010-01-26 12:00:00",
+      "cover": "https://www.researchgate.net/profile/Leandro_Lima14/publication/321320025/figure/fig1/AS:565433436127232@1511821244603/Mass-Effect-2-cover.png",
+      "banner": "https://steam.cryotank.net/wp-content/gallery/masseffect2/Mass-Effect-2-10-HD.png"
+    }
+  },
+  {
+    "model": "gaming.game",
+    "pk": 4,
+    "fields": {
+      "name": "Mass Effect 3",
+      "region": "Australia",
+      "description": "Mass Effect 3, the third installment in the Mass Effect trilogy, was released on March 6, 2012. In the final chapter of the trilogy, the Reapers have returned in force, and have begun their purge of the galaxy, attacking Earth. During this attack Commander Shepard is on Earth and forced to flee.[10] After fleeing Earth, Commander Shepard must hurry and rally the advanced races of the galaxy to make one final stand, not only to save Earth, but also to break a cycle that has continued for millions of years.",
+      "rating":  "ACB: MA: Blood, Language, Partial Nudity, Sexual Themes, Violence",
+      "developers":  [
+        {
+          "developer_id": 2
+        },
+         {
+          "developer_id": 8
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 2
+        },
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2012-03-08",
+      "cover": "",
+      "banner": ""
+    }
+  },
+    {
+    "model": "gaming.game",
+    "pk": 5,
+    "fields": {
+      "name": "Assassin's Creed",
+      "region": "Europe",
+      "description": "",
+      "rating":  "PEGI: 18+ Blood, Strong Language, Violence",
+      "developers":[
+        {"developer_id": 1},
+        {"developer_id": 7}
+      ],
+      "platforms": [
+        {
+          "platform_id": 2
+        },
+        {
+          "platform_id": 5
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2007-11-16 12:00:00",
+      "cover":"https://upload.wikimedia.org/wikipedia/en/5/52/Assassin%27s_Creed.jpg",
+      "banner":"https://miro.medium.com/max/1700/0*UBrO3Ydbx6HKPf5h.jpg"
+      }
+    },
+  {
+    "model": "gaming.game",
+    "pk": 6,
+    "fields": {
+      "name": "Mass Effect Andromeda",
+      "region": "North America",
+      "description": "Mass Effect: Andromeda, the first game in a new series, and the fourth major installment overall in the franchise, was revealed at E3 2015. It was released on March 21, 2017.The title utilizes EA DICE's Frostbite 3 engine and was released for Microsoft Windows, PlayStation 4 and Xbox One. Andromeda is the first game in the series to feature an open world environment. Set during the 29th century, the player's character is either Sara or Scott Ryder, designated as a Pathfinder – an operative tasked with discovering new planets in the Andromeda Galaxy.\n\n",
+      "rating":  "ESRB: M: Blood, Nudity, Strong Language, Strong Sexual Content, Violence",
+      "developers": [
+        {"developer_id":  2}
+      ],
+      "platforms": [
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 6
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2017-03-21 12:00:00",
+      "cover":"https://steam.cryotank.net/wp-content/gallery/masseffectandromeda/Mass-Effect-Andromeda-07-HD.png",
+      "banner":""
+      }
+    },
+    {
+    "model": "gaming.game",
+    "pk": 7,
+    "fields": {
+      "name": "Titanfall",
+      "region": "North America",
+      "description": "Titanfall, the first game in the series, was released for Xbox consoles, on Xbox One and Xbox 360 in 2014. The game was mainly multiplayer focused with no real single-player campaign included. Instead, there were single-player missions included that served as a way for the player to learn the mechanics of the game.",
+      "rating":  "ESRB: M: Blood and Gore, Strong Language, Violence",
+      "developers": [
+        {
+          "developer_id":  9
+        },
+        {
+          "developer_id":  10
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 5
+        },
+        {
+          "platform_id": 6
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2014-03-21 12:00:00",
+      "cover":"https://images-na.ssl-images-amazon.com/images/I/51ZMKvnLbbL._SX375_BO1,204,203,200_.jpg",
+      "banner":"https://i.pinimg.com/originals/61/d2/12/61d212584d19e12a1ef0a746c86c59d9.jpg"
+      }
+    },
+    {
+    "model": "gaming.game",
+    "pk": 8,
+    "fields": {
+      "name": "Titanfall 2",
+      "region": "North America",
+      "description": "Titanfall 2 is a first-person shooter video game, developed by Respawn Entertainment and published by Electronic Arts. In Titanfall 2, players control Titans, mecha-style exoskeletons and their pilots, who are agile and equipped with a variety of skills ranging from wall-running to cloaking.The game's conflict takes place in \"The Frontier\", a region of star systems far removed from the \"Core Systems\" where Earth is located. The Interstellar Manufacturing Corporation (IMC) and the Frontier Militia battle for control of the Frontier. The IMC seeks to exploit the Frontier's rich resources regardless of the consequences for planetary environments and civilian populations, while the Militia fight to expel the IMC and gain the Frontier's independence. In the wake of the Battle of Demeter, the Militia is on the offensive, battling for resources and control of the Frontier planets. Though weakened by the lack of reinforcements from the core systems because of the destruction of the refueling facility by James MacAllan, the IMC is still a dominant fighting force attempting to drive the Militia out and put down any resistance to their control ",
+      "rating":  "ESRB: M: Blood and Gore,Language, Violence",
+      "developers": [
+        {
+          "developer_id":  9
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 6
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2016-10-28 12:00:00",
+      "cover":"https://upload.wikimedia.org/wikipedia/en/1/13/Titanfall_2.jpg",
+      "banner":"https://cdn.images.express.co.uk/img/dynamic/143/590x/Titanfall-2-codes-700378.jpg"
+      }
+    },
+  {
+    "model": "gaming.game",
+    "pk": 9,
+    "fields": {
+      "name": "Apex Legends",
+      "description": "Apex Legends is the award-winning, free-to-play Battle Royale team shooter from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities and experience strategic squad play and innovative gameplay in the next evolution of Battle Royale.",
+      "region": "North America",
+      "rating":  "ESRB: T: Blood, Violence",
+      "developers": [
+        {
+          "developer_id":  9
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 6
+        },
+        {
+          "platform_id": 9
+        },
+        {
+          "platform_id": 8
+        }
+      ],
+      "release_date": "2019-02-04 12:00:00",
+      "cover":"https://media.contentapi.ea.com/content/dam/apex-legends/images/2020/08/s6-patch-notes-body-1.jpg.adapt.crop191x100.628p.jpg",
+      "banner":"https://image-cdn.essentiallysports.com/wp-content/uploads/20200906005821/apex-legends-1.jpg"
+      }
+    },
+  {
+    "model": "gaming.game",
+    "pk": 10,
+    "fields": {
+      "name": "Dark Souls",
+      "region": "Japan",
+      "description": "A spiritual successor to FromSoftware's Demon's Souls, Dark Souls is a 2011 action role-playing game developed by FromSoftware and published by Namco Bandai Games. The player character is a cursed undead, locked away in an undead asylum. After escaping the asylum, the player travels to Lordran to ring the Bells of Awakening. The player will either linking the flame to preserve the Age of Fire, or letting it die out to instigate the Age of Dark.",
+      "rating":  "ESRB: M: Blood and Gore, Partial Nudity, Violence",
+      "developers": [
+        {
+          "developer_id":  10
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 2
+        },
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 5
+        },
+        {
+          "platform_id": 6
+        },
+        {
+          "platform_id": 8
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2011-09-22 12:00:00",
+      "cover":"https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg",
+      "banner":"https://static.bandainamcoent.eu/high/dark-souls/dark-souls-hd/00-page-setup/ds-hd_banner.jpg"
+      }
+    },
+  {
+    "model": "gaming.game",
+    "pk": 11,
+    "fields": {
+      "name": "Dark Souls II",
+      "region": "North America",
+      "description": "The third game in the Souls series, Dark Souls II is an action role-playing game developed by FromSoftware and published by Bandai Namco Games. Plot: The story of Dark Souls II begins with a human who has become Undead, cursed to never die and doomed to eventually become a Hollow, a zombie-like being with no memories or purpose. To break the curse, the undead travels to the fallen kingdom of Drangleic and is tasked by the Emerald Herald with obtaining four Great Souls from powerful Old Ones whose names are long forgotten and forbidden. ",
+      "rating":  "ESRB: M: Blood and Gore, Mild Language, Partial Nudity, Violence",
+      "developers": [
+        {
+          "developer_id":  10
+        },
+        {
+          "developer_id":  11
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 2
+        },
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 5
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2014-03-11 12:00:00",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/e/ed/Dark_Souls_II_cover.jpg",
+      "banner":"https://steam.cryotank.net/wp-content/gallery/darksouls2/Dark-Souls-II-01-HD.png"
+      }
+    },
+  {
+    "model": "gaming.game",
+    "pk": 10,
+    "fields": {
+      "name": "Dark Souls III",
+      "region": "North America",
+      "rating":  "ESRB: M: Blood, Violence",
+      "description": "The fourth installment of the Souls series and the final installment of the Dark Souls trilogy,Dark Souls III is an action role-playing video game developed by FromSoftware and published by Bandai Namco Entertainment. Plot:Set in the Kingdom of Lothric, a bell has rung to signal that the First Flame, responsible for maintaining the Age of Fire, is dying out. As has happened many times before, the coming of the Age of Dark produces the undead: cursed beings that rise up after death. The Age of Fire can be prolonged with the linking of the fire, a ritual in which great lords and heroes sacrifice their souls to rekindle the First Flame. However, Prince Lothric, the chosen linker for this age, has abandoned his duty and instead chooses to watch the flame die from afar. The bell is the last hope for the Age of Fire, resurrecting previous Lords of Cinder (heroes who linked the flame in past ages) to attempt to link the fire again; however, all but one Lord shirk their duty. The Ashen One, an Undead who failed to become a Lord of Cinder and thus called an Unkindled, rises and must link the fire. ",
+      "developers": [
+        {
+          "developer_id":  10
+        },
+        {
+          "developer_id":  11
+        }
+      ],
+      "platforms": [
+        {
+          "platform_id": 3
+        },
+        {
+          "platform_id": 6
+        },
+        {
+          "platform_id": 9
+        }
+      ],
+      "release_date": "2016-03-24 12:00:00",
+      "cover":"https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Dark_souls_3_cover_art.jpg/220px-Dark_souls_3_cover_art.jpg",
+      "banner":"https://assets.vg247.com/current//2016/10/dark_souls_ashes-of_ariandel-5.jpg"
+      }
+    }
+  ]
