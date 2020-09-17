@@ -17,6 +17,9 @@ class Platform(models.Model):
 class Developer(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 class Game(models.Model):
     name = models.CharField(max_length=100, default=None)

@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import Game, Platform, Review
+from .models import Game, Platform, Review, Developer
 from django.http import HttpResponse
 from authentication.models import User
 from rest_framework import viewsets, permissions
-from .serializers import GameSerializer, PlatformSerializer, ReviewSerializer
+from .serializers import GameSerializer, PlatformSerializer, ReviewSerializer, DeveloperSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.exceptions import (
     ValidationError, PermissionDenied
@@ -13,7 +13,16 @@ from rest_framework import generics
 
 # Create your views here.
 
-class GameViewSet(generics.RetrieveAPIView):
+class GameViewSet(generics.ListAPIView):
+    permission_classes = (AllowAny,)
+    serializer_class = GameSerializer
+
+    def get_queryset(self):
+            queryset = Game.objects.all()
+            return queryset
+
+
+class OneGameViewSet(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (AllowAny,)
     serializer_class = GameSerializer
 
@@ -21,10 +30,18 @@ class GameViewSet(generics.RetrieveAPIView):
         if self.kwargs.get('pk'):
             game = Game.objects.filter(pk=self.kwargs['pk'])
             print(game)
-            # queryset = game.reviews.all()
-            # print(queryset)
-            return game
+            queryset = game
+            print(queryset)
+            return queryset
 
+
+class DeveloperViewset(generics.ListAPIView):
+    permission_classes = (AllowAny,)
+    serializer_class = DeveloperSerializer
+    def get_queryset(self):
+            queryset = Developer.objects.all()
+            print(queryset)
+            return queryset
 
 class PlatformViewSet(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)

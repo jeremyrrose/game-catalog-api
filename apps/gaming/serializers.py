@@ -1,4 +1,4 @@
-from .models import Game, Platform, Review
+from .models import Game, Platform, Review, Developer
 from authentication.serializers import UserListSerializer
 from rest_framework import serializers
 
@@ -26,3 +26,11 @@ class PlatformSerializer(serializers.ModelSerializer):
     class Meta:
         model = Platform
         fields = ('id', 'name', 'brand', 'games')
+
+
+class DeveloperSerializer(serializers.ModelSerializer):
+    games = GameSerializer(many=True, read_only=True, required=False)
+
+    class Meta:
+        model = Platform
+        fields = ('id', 'name', 'games')
