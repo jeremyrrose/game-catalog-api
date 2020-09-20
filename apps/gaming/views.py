@@ -43,14 +43,16 @@ class DeveloperViewset(generics.ListAPIView):
             print(queryset)
             return queryset
 
-class PlatformViewSet(generics.ListCreateAPIView):
+
+class PlatformViewSet(generics.RetrieveAPIView):
     permission_classes = (IsAuthenticated,)
     serializer_class = PlatformSerializer
 
     def get_queryset(self):
         if self.kwargs.get('pk'):
             platform = Platform.objects.get(pk=self.kwargs['pk'])
-            queryset = platform.games.all()
+            queryset = platform
+            print(queryset)
             return queryset
 
 

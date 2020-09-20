@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate
 from rest_framework import serializers
-from .models import User
+from .models import User, UserWatch
+from apps.gaming.serializers import GameSerializer
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
@@ -32,7 +33,7 @@ class LoginSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password', 'token')
+        fields = ('id', 'username', 'email', 'password', 'token')
 
     def validate(self, data):
         username = data.get('username', None)
@@ -60,6 +61,7 @@ class LoginSerializer(serializers.ModelSerializer):
                 'This user has been deactivated'
             )
         return {
+            "id": user.pk,
             "username": user.username,
             "email": user.email,
             "token": user.token
@@ -70,3 +72,21 @@ class UserListSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'username', 'email')
+
+
+class UserInfoSerializer(serializers.ModelSerializer):
+    watch_list = GameSerializer(many=True, required=False)
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'first_name', 'games', 'watch_list', 'platforms',)
+        extra_kwargs = {'watch_list': {'required': False}}
+
+
+class ManyGamesSerializer(serializers.ModelSerializer):
+    # user_id = UserInfoSerializer(many=True, required=False)
+    game_id = GameSerializer(many=True, required=False)
+
+    class Meta:
+        model: UserWatch
+        fields = ('id', 'user_id', 'game_id')

@@ -1,4 +1,4 @@
-from rest_framework import status  # this helps us to know HTTP status of our request
+from rest_framework import status, viewsets  # this helps us to know HTTP status of our request
 from rest_framework.response import Response  # We need this to convert DB query to JSON
 from rest_framework.views import APIView
 # Not all the models need CRUD, sometimes all we need to do is read
@@ -6,8 +6,9 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 # we can allow all the users to see the view
 from rest_framework.permissions import AllowAny
 
-from .serializers import RegistrationSerializer, LoginSerializer, UserListSerializer
+from .serializers import RegistrationSerializer, LoginSerializer,  UserInfoSerializer, UserListSerializer
 from .models import User
+from rest_framework import generics
 
 
 class RegistrationAPIView(APIView):
@@ -58,3 +59,27 @@ class UserListViewSet(ReadOnlyModelViewSet):
     permission_classes = (AllowAny,)
     serializer_class = UserListSerializer
 
+
+class OneUser(viewsets.ModelViewSet):
+    permission_classes = (AllowAny,)
+    serializer_class = UserInfoSerializer
+
+    def get_queryset(self):
+        if self.kwargs.get('pk'):
+            user = User.objects.filter(pk=self.kwargs['pk'])
+            print(user)
+            queryset = user
+            print(queryset)
+            return queryset
+
+    def partial_update(self, request, *args, **kwargs):
+        if self.kwargs.get('pk'):
+            users = User.objects.filter(pk=self.kwargs['pk'])
+            user = User.objects.get(pk=self.kwargs['pk'])
+            print(request.data)
+            user.watch_list.clear()
+            user.watch_list.set(request.data.get('watch_list', user.watch_list))
+            user.save()
+
+            serializer = UserInfoSerializer(user)
+            return Response(serializer.data)

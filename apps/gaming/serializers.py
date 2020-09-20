@@ -1,5 +1,4 @@
 from .models import Game, Platform, Review, Developer
-from authentication.serializers import UserListSerializer
 from rest_framework import serializers
 
 

@@ -10,6 +10,8 @@ jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
 jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 
 
+
+
 class UserManager(BaseUserManager):
     """
     Django requires that custom users define their own Manager class. By
@@ -109,3 +111,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         token = jwt_encode_handler(payload)
 
         return token
+
+
+class UserWatch(models.Model):
+    user_id = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
+    game_id = models.ForeignKey(Game, default=None, on_delete=models.CASCADE)
+    object = models.Manager()
+
+
