@@ -2,104 +2,30 @@
 
 ## Overview
 
-This project will give you a chance to use the skills we've learned in class to create a full CRUD web application using the skills that you have learned in this unite. You'll get a chance to use JavaScript or Vue to tackle interactions on the front-end, as well as a custom API using Django, Django restframework, JWT with postgresql in the backend.
+Recreation is a gaming Ecommerce site that takes inspiration from pre-existing sites such as the Origin. Recreation Api uses the Django rest framework. Originally I was going to use an external api to hold the game information and my api would hold relationships, but decidded to seed a couple of games instead
 
-You will be working individually for this project, but we'll be guiding you throughout the process and helping as you go.
-
----
-
-## Requirements
-It is important to keep in mind the goal of this program and these projects, they are to utilize the skills you have been taught and the skills that employers care about. You should strive to build projects that will catch an employers eye and get you hired.
-
-### Technical Requirements
-Two separate repo's are required for this project, one for the Back-End and one for the Front-End. They must not reside on the same repo.
-
-**Back-End Requirements:**
-
-- Your back-end must be a Django, djangorestframework, djangorestframework-jwt, with postgresql
-- You must have minimum of three or models with two associations.
-- Must have Create, Read, Update, and Destroy functionality built throughout the
-  app (i.e. You don't need full CRUD on every model, just full CRUD throughout
-  your models where it makes sense).
-
-**Front-End Requirements:**
-- Your front-end must use JQuery or Vue and leverage the backend API.
-- You must communicate with the back-end API RESTfully to Create, Read, Update,
-  and Destroy resources.
-- Your frontend must be responsive and work on mobile phones, tablets, and desktops
-- A mobile nav that expands and collapses when a user clicks on the hamburger icon.
-
-Review the [Rubric](https://git.generalassemb.ly/SEIR-629/PROJECT-4/blob/master/evaluation-rubric.md) for the specifics of how your project will
-be graded.
+Authentication models- Users, Login
+Gaming Models - Platform, Developer, Game(connected to Platform, User, and Developer), and Review(connected to Game and User)
 
 
-### Necessary Deliverables
-Your submission must include **all** of the following:
-
-#### Project Idea and Initial Planning
-By the end of Day 1 you need to submit:
-
-1. Your project idea (a brief 2-3 sentence description of your app)
-2. A list of your models and their properties
-3. Link to the `frontend` repository with project worksheet
-4. Link to the `backend` repository with project worksheet
-
-These and any other planning assets (wireframes, user stories, etc) should go
-inside a `planning/` directory inside your `backend` and `frontend` project repository accordingly.
-
-### Suggested Ways to Start
-
-- **Don’t hesitate to write throwaway code** to solve short-term problems.
-- **Read the docs for whatever technologies, frameworks, or APIs you use**.
-- **Write your code DRY** and **build your APIs RESTful**.
-- **Commit early, commit often**. Don’t be afraid to break something because you can always go back in time to a previous version.
-- **Keep user stories small and well-defined**. Remember – user stories focus on what a user needs, not what development tasks need accomplishing.
-- **Write code another developer wouldn't have to ask you about**. Do your naming conventions make sense? Would another developer be able to look at your app and understand what everything is?
-- **Make it all well-formatted**. Are you indenting, consistently? Can we find the start and end of every div, curly brace, etc.?
-- **Comment your code**. Will someone understand what is going on in each block or function? Even if it's obvious, explaining the what & why means someone else can pick it up and get it.
-- **Write pseudocode before you write actual code**. Thinking through the logic of something helps.
-
-
-### Final Application
-
-Your project is due on the last day of Project Week. Create an issue on this repo containing:
-
-- A link to your deployed application
-- A link to your Project 2 Github repositories
-
-The repository for your backend API should include:
-
-- A working JSON API built using Django that meets the technical requirements above.
-- Frequent commits dating back to the very beginning of the project.
-- A `planning/` directory in the root of your `backend` and `frontend` repo that contains a `readme` with all: 
-    - A couple of paragraphs about the **general approach you took**.
-    - Link to your **user stories** – who are your users, what do they want, and why?
-    - Link to your **wireframes** – sketches of  views and interfaces in your application.
-    - Link to your **Time/Priority** matrix 
-    - Table including functionality and estimated/actual time for completion
-    - Descriptions of any **unsolved problems** or **hurdles** you had to overcome.
-    
-    #### MVP
+#### MVP
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Make/Alter Models,Serializers and Views | H | 5hr | 2hr | -hr|
-| Test and Debug Api | H | 5hr | 3hr 30min | -hr|
-| Create Urls | H | 2hr | 0hr 30min | -hr|
+| Make Models,Serializers and Views | H | 5hr | 2hr | -hr|
+| Test and Debug Api | H | 5hr | 6hr 30min | -hr|
+| Create Urls | H | 2hr | 3hr 30min | -hr|
 | Make test GS api calls | H | 2hr | 30min | -hr|
 | Seeding Database | H | 3hr | 3hr | -hr|
-| Delete favorite Frontend| H | 2hr | .5hr | -hr|
-| Activities Modal| H | 2hr | 1hr | 1hr|
-| Seed Database | H | 5hr | 6hr | -hr|
-| Total | H | 18hrs| -hrs | -hrs |
+| Alter models to accomodate frontend| H | 1hr | 5hr | -hr|
+| Total | H | 13hrs| 20hrs | -hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-|Robust Search features| L | 3hr | -hr | -hr|
-|Robust Review Feature| L | 2hr | 7hr | -hr|
-| --| M | 4hr | -hr | -hr|
-| -- | H | 4hr | -hr | -hr|
-| Total | H | 5hrs| -hrs | -hrs |
+|Add more seed data with quality info| L | 5hr | -hr | -hr|
+|Add superuser priveleges,and endpoints| L | 4hr | 7hr | -hr|
+|Priority property on reviews | M | 1hr | -hr | -hr|
+| Total | H | 10hrs| -hrs | -hrs |
     
 
 The repository for the frontend of your application should include:
