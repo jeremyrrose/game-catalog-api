@@ -1,0 +1,91 @@
+[
+  {
+    "model": "review",
+    "fields":{
+      "header": "Addictive",
+      "game": 1,
+      "owner": 1,
+      "text": "I played this for 10 hours a day, every weekday and even more on the weekend. Needless to say this game is awesome but too addictive ",
+      "is_official": false
+    }
+  },
+  {
+    "model": "review",
+    "fields": {
+      "header": "So big",
+      "game": 1,
+      "owner": 2,
+      "text": "This game was waay too big. I prefer the first game",
+      "is_official": false
+    }
+  },
+     {
+    "model": "review",
+    "fields":{
+      "header": "Ritchie Witchie",
+      "game": 1,
+      "owner": 2,
+      "text": "My students havent stopped talking about this Witchie fella. He's alright I guess",
+      "is_official": false
+    }
+  },
+   {
+    "model": "review",
+    "fields":{
+      "header": "A crunchy start to a great franchise",
+      "game": 2,
+      "owner": 1,
+      "text": "Commander Shepard looks busted, the gameplay is okay, but man the story.",
+      "is_official": false
+    }
+  },
+   {
+    "model": "review",
+    "fields":{
+      "header": "Don't talk to me I play Apex legends",
+      "game": 9,
+      "owner": 2,
+      "text": "Grahtata, Skibedip. Those are some of the excellent noises you hear in this game",
+      "is_official": false
+    }
+  },
+   {
+    "model": "review",
+    "fields":{
+      "header": "Relaxing",
+      "game": 10,
+      "owner": 2,
+      "text": "When I'm feeling impatient and jittery, I pop this game in play for an hour and boom i'm cured",
+      "is_official": false
+    }
+  }, {
+    "model": "review",
+    "fields":{
+      "header": "BT is Best Boy",
+      "game": 8,
+      "owner": 1,
+      "text": "They didn't have to do him like that ;-;",
+      "is_official": false
+    }
+  },
+   {
+    "model": "review",
+    "fields":{
+      "header": "They have Nigerian prince robes",
+      "game": 11,
+      "owner": 2,
+      "text": "You have to kill the Shop Keeper. He's not a true friend so its okay",
+      "is_official": false
+    }
+  },
+   {
+    "model": "review",
+    "fields":{
+      "header": "They did that Gwyndolin dirty",
+      "game": 9,
+      "owner": 1,
+      "text": "I felt bad for the dude, even though I beat him upside the head two games ago",
+      "is_official": false
+    }
+  }
+]

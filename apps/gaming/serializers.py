@@ -14,6 +14,8 @@ class GameSerializer(serializers.ModelSerializer):
     reviews = ReviewSerializer(many=True, required=False)
 
     class Meta:
+        reviews = ReviewSerializer(many=True, required=False)
+
         model = Game
         fields = ('id', 'name', 'description', 'platforms', 'region', 'rating',
                   'developers', 'release_date', 'reviews', 'cover', 'banner')

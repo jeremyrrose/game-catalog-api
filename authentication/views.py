@@ -8,6 +8,7 @@ from rest_framework.permissions import AllowAny
 
 from .serializers import RegistrationSerializer, LoginSerializer,  UserInfoSerializer, UserListSerializer
 from .models import User
+from apps.gaming.models import Review
 from rest_framework import generics
 
 
@@ -67,16 +68,13 @@ class OneUser(viewsets.ModelViewSet):
     def get_queryset(self):
         if self.kwargs.get('pk'):
             user = User.objects.filter(pk=self.kwargs['pk'])
-            print(user)
             queryset = user
-            print(queryset)
             return queryset
 
     def partial_update(self, request, *args, **kwargs):
         if self.kwargs.get('pk'):
             users = User.objects.filter(pk=self.kwargs['pk'])
             user = User.objects.get(pk=self.kwargs['pk'])
-            print(request.data)
             user.watch_list.clear()
             user.watch_list.set(request.data.get('watch_list', user.watch_list))
             user.save()

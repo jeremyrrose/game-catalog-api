@@ -29,9 +29,7 @@ class OneGameViewSet(generics.RetrieveUpdateDestroyAPIView):
     def get_queryset(self):
         if self.kwargs.get('pk'):
             game = Game.objects.filter(pk=self.kwargs['pk'])
-            print(game)
             queryset = game
-            print(queryset)
             return queryset
 
 
@@ -40,7 +38,6 @@ class DeveloperViewset(generics.ListAPIView):
     serializer_class = DeveloperSerializer
     def get_queryset(self):
             queryset = Developer.objects.all()
-            print(queryset)
             return queryset
 
 
@@ -89,3 +86,4 @@ class ReviewViewSet(viewsets.ModelViewSet):
                 "You can't rearrange the words of other people!!"
             )
         return super().update(request, *args, **kwargs)
+

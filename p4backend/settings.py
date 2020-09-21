@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import django_heroku
+import datetime
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -126,6 +127,9 @@ CORS_ORIGIN_WHITELIST = [
 CORS_ORIGIN_REGEX_WHITELIST = [
     'http://localhost:8080',
 ]
+
+JWT_AUTH = {'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=5184000),
+            'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=60)}
 
 
 AUTH_USER_MODEL = 'authentication.User'

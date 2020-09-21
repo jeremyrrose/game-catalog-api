@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate
 from rest_framework import serializers
 from .models import User, UserWatch
-from apps.gaming.serializers import GameSerializer
+from apps.gaming.serializers import GameSerializer, ReviewSerializer
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
@@ -76,10 +76,12 @@ class UserListSerializer(serializers.ModelSerializer):
 
 class UserInfoSerializer(serializers.ModelSerializer):
     watch_list = GameSerializer(many=True, required=False)
+    games = GameSerializer(many=True, required=False)
+    reviews = ReviewSerializer(many=True, required=False)
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'first_name', 'games', 'watch_list', 'platforms',)
+        fields = ('id', 'username', 'first_name', 'reviews', 'games', 'watch_list', 'platforms',)
         extra_kwargs = {'watch_list': {'required': False}}
 
 
