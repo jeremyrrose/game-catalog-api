@@ -1,6 +1,7 @@
 [
   {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 1,
     "fields":{
       "header": "Addictive",
       "game": 1,
@@ -10,17 +11,19 @@
     }
   },
   {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 2,
     "fields": {
       "header": "So big",
       "game": 1,
-      "owner": 2,
+      "owner": 3,
       "text": "This game was waay too big. I prefer the first game",
       "is_official": false
     }
   },
      {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 3,
     "fields":{
       "header": "Ritchie Witchie",
       "game": 1,
@@ -30,7 +33,8 @@
     }
   },
    {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 4,
     "fields":{
       "header": "A crunchy start to a great franchise",
       "game": 2,
@@ -40,7 +44,8 @@
     }
   },
    {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 5,
     "fields":{
       "header": "Don't talk to me I play Apex legends",
       "game": 9,
@@ -50,16 +55,18 @@
     }
   },
    {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 6,
     "fields":{
       "header": "Relaxing",
       "game": 10,
-      "owner": 2,
+      "owner": 3,
       "text": "When I'm feeling impatient and jittery, I pop this game in play for an hour and boom i'm cured",
       "is_official": false
     }
   }, {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 7,
     "fields":{
       "header": "BT is Best Boy",
       "game": 8,
@@ -69,7 +76,8 @@
     }
   },
    {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 8,
     "fields":{
       "header": "They have Nigerian prince robes",
       "game": 11,
@@ -79,7 +87,8 @@
     }
   },
    {
-    "model": "review",
+    "model": "gaming.review",
+    "pk": 9,
     "fields":{
       "header": "They did that Gwyndolin dirty",
       "game": 9,
