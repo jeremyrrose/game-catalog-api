@@ -1,5 +1,5 @@
 # Game Catalog API
-Forked from [Ebs B.'s Capture API](https://github.com/e-mbrown/p4-backend). 
+Forked from [Ebs B.'s Recreation API](https://github.com/e-mbrown/p4-backend). 
 
 Deployed at https://game-catalog-django.herokuapp.com/
 
