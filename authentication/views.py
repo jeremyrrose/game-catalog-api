@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 # Not all the models need CRUD, sometimes all we need to do is read
 from rest_framework.viewsets import ReadOnlyModelViewSet
 # we can allow all the users to see the view
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 from .serializers import RegistrationSerializer, LoginSerializer,  UserInfoSerializer, UserListSerializer
 from .models import User
@@ -78,6 +78,28 @@ class OneUser(viewsets.ModelViewSet):
             user.watch_list.clear()
             user.watch_list.set(request.data.get('watch_list', user.watch_list))
             user.save()
+
+            serializer = UserInfoSerializer(user)
+            return Response(serializer.data)
+
+class OneUser(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated,)
+    serializer_class = UserInfoSerializer
+
+    def get_queryset(self):
+        if self.kwargs.get('pk'):
+            user = User.objects.filter(pk=self.kwargs['pk'])
+            queryset = user
+            return queryset
+
+    def partial_update(self, request, *args, **kwargs):
+        if self.kwargs.get('pk'):
+            users = User.objects.filter(pk=self.kwargs['pk'])
+            user = User.objects.get(pk=self.kwargs['pk'])
+            if user == self.request.user:
+                user.watch_list.clear()
+                user.watch_list.set(request.data.get('watch_list', user.watch_list))
+                user.save()
 
             serializer = UserInfoSerializer(user)
             return Response(serializer.data)
