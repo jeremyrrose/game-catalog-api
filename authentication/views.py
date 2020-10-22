@@ -97,8 +97,10 @@ class OneUser(viewsets.ModelViewSet):
             users = User.objects.filter(pk=self.kwargs['pk'])
             user = User.objects.get(pk=self.kwargs['pk'])
             if user == self.request.user:
-                user.watch_list.clear()
-                user.watch_list.set(request.data.get('watch_list', user.watch_list))
+                if request.data.get('watch_list'):
+                    print(request.data.get('watch_list'))
+                    user.watch_list.clear()
+                    user.watch_list.set(request.data.get('watch_list', user.watch_list))
                 user.save()
 
             serializer = UserInfoSerializer(user)
