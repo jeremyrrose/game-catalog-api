@@ -119,16 +119,16 @@ REST_FRAMEWORK = {
     ),
 }
 
-CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
+CORS_ORIGIN_ALLOW_ALL = True  # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8080',
-    'https://competent-wescoff-5ebab2.netlify.app/'
-] # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
-CORS_ORIGIN_REGEX_WHITELIST = [
-    'http://localhost:8080',
-    'https://competent-wescoff-5ebab2.netlify.app/'
-]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:8080',
+#     'https://competent-wescoff-5ebab2.netlify.app'
+# ] # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
+# CORS_ORIGIN_REGEX_WHITELIST = [
+#     'http://localhost:8080',
+#     'https://competent-wescoff-5ebab2.netlify.app'
+# ]
 
 JWT_AUTH = {'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=5184000),
             'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=60)}
