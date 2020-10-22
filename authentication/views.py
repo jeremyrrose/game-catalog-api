@@ -103,8 +103,9 @@ class OneUser(viewsets.ModelViewSet):
                     user.watch_list.set(request.data.get('watch_list', user.watch_list))
                 if request.data.get('games'):
                     print(request.data.get('games'))
-                    user.watch_list.clear()
-                    user.watch_list.set(request.data.get('games', user.games))
+                    user.games.clear()
+                    user.games.set(request.data.get('games', user.games))
+
                 user.save()
             else:
                 return Response(status=status.HTTP_401_UNAUTHORIZED)
